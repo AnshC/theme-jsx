@@ -34,6 +34,8 @@ export default function Home(){
                                 <li>Routing</li>
                                 <li>SVGs</li>
                                 <li>Fonts</li>
+                                <li>Responsive Navbar</li>
+                                <li>Default Page is Mobile Responsive</li>
                             </ul>
                         </div>
                     </div>
