@@ -49,13 +49,12 @@
 /* Navigation Styles */
 .navigation {
   width:100%;
-  height:12vh;
-  overflow:hidden;
-  position: absolute;
+  min-height:12vh;
   background-color: var(--blue);
   display: flex;
   align-items: center;
   justify-content:space-around;
+  overflow: hidden;
 }
 
 .navigation #brand{
@@ -66,6 +65,7 @@
 .navigation .links{
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .navigation .link{
@@ -95,6 +95,69 @@
 .navigation .ReactLink:hover{
   background-color:white;
   color: var(--blue);
+}
+
+.navigation .burger .line {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+  transition: all 0.2s ;
+}
+
+.navigation .burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Nav Responsive Styles */
+
+@media screen and (max-width: 860px) {
+  .navigation .burger{
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    width: 100%;
+    height: 88vh;
+    display: none !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    right: 0px;
+    top: 12vh;
+  }
+
+  .link {
+    transition: all 1s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.nav-active {
+  display: flex !important;
+}
+
+.burger-animation #line1 {
+  transform: rotate(-45deg) translate(-5px, 4px);
+  margin:0
+}
+
+.burger-animation #line2 {
+  opacity: 0;
+}
+
+.burger-animation #line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+  margin: 0;
+}
+
+.link-active {
+
 }
 
 /* Home Styles */
@@ -179,6 +242,7 @@
   margin:10px;
   flex: 1 200px;
   padding:20px;
+  text-align: center;
 }
 
 .home section.cards .card .head{
@@ -193,10 +257,12 @@
   padding-top: 5px;
   color:var(--blue);
   padding-left:10px;
+  list-style: none;
 }
 
 .home section.cards .card li{
   font-family: InterBold;
+  margin-top: 4px;
 }
 
 .home section.cards .card code{
@@ -206,6 +272,16 @@
 .about{
   width:100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h1 {
+  font-family: InterBold;
+  text-align: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 /* Footer Styles */
