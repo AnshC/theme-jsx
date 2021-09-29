@@ -19,6 +19,11 @@
 
 /* Default */
 
+::selection {
+  color: white;
+  background: rgb(255, 89, 0);
+}
+
 :root{
   --blue: rgb(0, 102, 255);
   --dark: rgb(1, 49, 121);
